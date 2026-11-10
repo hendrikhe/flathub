@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.diveastronaut.DiveAstronaut</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary=https://diveastronaut.com/terms.html</project_license>
+  <name>Dive Astronaut</name>
+  <summary>Restore the colors of underwater videos and photos</summary>
+  <developer id="com.diveastronaut">
+    <name>Script Pilot</name>
+  </developer>
+  <description>
+    <p>Dive Astronaut brings back the colors that water steals from your dive videos and photos. Red and contrast return automatically, frame by frame, right on your computer: your files are never uploaded.</p>
+    <ul>
+      <li>Automatic underwater color correction for videos and photos from GoPro, DJI, phones and any camera</li>
+      <li>Batch queue: add many files or a whole folder, click Start and keep working</li>
+      <li>Editor with cut, speed, text, music, logo, picture-in-picture and templates</li>
+      <li>Vertical reels (9:16) for Instagram, TikTok and Shorts with automatic framing</li>
+      <li>Upscale, frame rate and bitrate options</li>
+      <li>NVIDIA GPU acceleration (NVENC) when available</li>
+    </ul>
+    <p>Sign in with the same Google or Apple account you use in the Dive Astronaut app on Android, iPhone or Mac. The Linux app is included in Dive Astronaut Pro.</p>
+  </description>
+  <launchable type="desktop-id">com.diveastronaut.DiveAstronaut.desktop</launchable>
+  <url type="homepage">https://diveastronaut.com</url>
+  <url type="contact">https://diveastronaut.com</url>
+  <url type="help">https://diveastronaut.com</url>
+  <categories>
+    <category>AudioVideo</category>
+    <category>Video</category>
+    <category>Graphics</category>
+    <category>Photography</category>
+  </categories>
+  <keywords>
+    <keyword>underwater</keyword>
+    <keyword>dive</keyword>
+    <keyword>scuba</keyword>
+    <keyword>color correction</keyword>
+    <keyword>GoPro</keyword>
+    <keyword>video editor</keyword>
+  </keywords>
+  <screenshots>
+    <screenshot type="default">
+      <caption>The app's before/after comparison of a corrected dive video</caption>
+      <image>https://diveastronaut.com/assets/store/0-app-compare.jpg</image>
+    </screenshot>
+    <screenshot>
+      <caption>Bring back the colors of your dives</caption>
+      <image>https://diveastronaut.com/assets/store/1-turtle.jpg</image>
+    </screenshot>
+    <screenshot>
+      <caption>Red and contrast restored, frame by frame</caption>
+      <image>https://diveastronaut.com/assets/store/2-grouper.jpg</image>
+    </screenshot>
+    <screenshot>
+      <caption>Automatic correction for GoPro, DJI and phones</caption>
+      <image>https://diveastronaut.com/assets/store/3-grunts.jpg</image>
+    </screenshot>
+    <screenshot>
+      <caption>Processed on your computer, never uploaded</caption>
+      <image>https://diveastronaut.com/assets/store/4-fishswarm.jpg</image>
+    </screenshot>
+  </screenshots>
+  <branding>
+    <color type="primary" scheme_preference="light">#7fd8e6</color>
+    <color type="primary" scheme_preference="dark">#0a2a3a</color>
+  </branding>
+  <content_rating type="oars-1.1" />
+  <requires>
+    <display_length compare="ge">768</display_length>
+  </requires>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+  <releases>
+    <release version="2.7.1" date="2026-11-10">
+      <description>
+        <p>First release for Linux.</p>
+      </description>
+    </release>
+  </releases>
+</component>

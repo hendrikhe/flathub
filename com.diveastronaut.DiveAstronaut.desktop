@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Dive Astronaut
+Comment=Underwater video and photo color correction
+Exec=dive-astronaut
+Icon=com.diveastronaut.DiveAstronaut
+Terminal=false
+Categories=AudioVideo;Video;
+Keywords=underwater;dive;scuba;color;GoPro;video;
+StartupWMClass=com-scriptpilot-divepilot-MainKt
+PrefersNonDefaultGPU=true

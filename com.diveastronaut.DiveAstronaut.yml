@@ -1,0 +1,46 @@
+app-id: com.diveastronaut.DiveAstronaut
+runtime: org.freedesktop.Platform
+runtime-version: '26.08'
+sdk: org.freedesktop.Sdk
+command: dive-astronaut
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=pulseaudio
+  - --share=network
+  # GPU: OpenGL + NVENC/NVDEC/CUDA (o /dev/nvidia* nao entra so com dri)
+  - --device=all
+  # videos/fotos do usuario e saida em Videos/Imagens
+  - --filesystem=xdg-videos
+  - --filesystem=xdg-pictures
+  - --filesystem=xdg-download
+  # cartao SD / SSD externo da camera
+  - --filesystem=/media
+  - --filesystem=/run/media
+  - --talk-name=org.freedesktop.FileManager1
+modules:
+  - name: dive-astronaut
+    buildsystem: simple
+    build-commands:
+      - mkdir -p /app/opt/dive-astronaut
+      - cp -a DiveAstronaut/. /app/opt/dive-astronaut/
+      - install -Dm755 dive-astronaut.sh /app/bin/dive-astronaut
+      - install -Dm644 com.diveastronaut.DiveAstronaut.desktop /app/share/applications/com.diveastronaut.DiveAstronaut.desktop
+      - install -Dm644 com.diveastronaut.DiveAstronaut.metainfo.xml /app/share/metainfo/com.diveastronaut.DiveAstronaut.metainfo.xml
+      - install -Dm644 icon-256.png /app/share/icons/hicolor/256x256/apps/com.diveastronaut.DiveAstronaut.png
+      - install -Dm644 icon-512.png /app/share/icons/hicolor/512x512/apps/com.diveastronaut.DiveAstronaut.png
+    sources:
+      - type: archive
+        url: https://diveastronaut.com/download/linux/DiveAstronaut-Linux-2.7.1-687d1827-x86_64.tar.gz
+        sha256: 687d18279ac7d584ca91f4be842cd2f17f5645c489a08f83a6a6154374257384
+        strip-components: 0
+      - type: file
+        path: dive-astronaut.sh
+      - type: file
+        path: com.diveastronaut.DiveAstronaut.desktop
+      - type: file
+        path: com.diveastronaut.DiveAstronaut.metainfo.xml
+      - type: file
+        path: icon-256.png
+      - type: file
+        path: icon-512.png
